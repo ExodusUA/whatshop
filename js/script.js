@@ -1,37 +1,38 @@
-;(function($){
+;
+(function($) {
     "use strict";
 
     /* ==========================================================================
        Preloader
     ========================================================================== */
     $(window).on('load', function() {
-         $('#status').fadeOut();
+        $('#status').fadeOut();
         $('#preloader').delay(350).fadeOut('slow');
-        $('body').delay(350).css({'overflow':'visible'});
+        $('body').delay(350).css({ 'overflow': 'visible' });
     })
 
-     /* ==========================================================================
+    /* ==========================================================================
         Magnfic Video
     ========================================================================== */
 
     var $vdoPop = $('.video');
-    if($vdoPop.length > 0){
-       $vdoPop.magnificPopup({
-          type: 'iframe',
-              iframe: {
-                  markup: '<style>.mfp-iframe-holder .mfp-content {max-width: 900px;height:500px}</style>' +
-                      '<div class="mfp-iframe-scaler" >' +
-                      '<div class="mfp-close"></div>' +
-                      '<iframe class="mfp-iframe" frameborder="0" allowfullscreen></iframe>' +
-                      '</div></div>'
-              }
-          });
+    if ($vdoPop.length > 0) {
+        $vdoPop.magnificPopup({
+            type: 'iframe',
+            iframe: {
+                markup: '<style>.mfp-iframe-holder .mfp-content {max-width: 900px;height:500px}</style>' +
+                    '<div class="mfp-iframe-scaler" >' +
+                    '<div class="mfp-close"></div>' +
+                    '<iframe class="mfp-iframe" frameborder="0" allowfullscreen></iframe>' +
+                    '</div></div>'
+            }
+        });
     }
-     /* ==========================================================================
+    /* ==========================================================================
        Counter Up
     ========================================================================== */
     var $counter = $('.counter');
-    if($counter.length > 0){
+    if ($counter.length > 0) {
         $counter.counterUp({
             delay: 20,
             time: 3000
@@ -42,7 +43,7 @@
         Parallax
     ========================================================================== */
     var $parallax = $('.parallaxie');
-    if($parallax.length > 0){
+    if ($parallax.length > 0) {
         $parallax.parallaxie({
             speed: .975
         });
@@ -52,36 +53,36 @@
     Screenshot carousel
     ========================================================================== */
     var $loop = $('.screen')
-    if($loop.length > 0){
+    if ($loop.length > 0) {
         $loop.owlCarousel({
-        loop:true,
-        nav: false,
-        center:true,
-        autoplay:true,
-        autoplayTimeout:2000,
-        margin:50,
-        responsive:{
-            320:{
-                items:2,
-                margin:10
-            },
-            481:{
-                items:3,
-                margin:60
-            },
-            991:{
-                items:4
+            loop: true,
+            nav: false,
+            center: true,
+            autoplay: true,
+            autoplayTimeout: 2000,
+            margin: 50,
+            responsive: {
+                320: {
+                    items: 2,
+                    margin: 10
+                },
+                481: {
+                    items: 3,
+                    margin: 60
+                },
+                991: {
+                    items: 4
+                }
             }
-        }
-    });
+        });
     }
 
     /* ==========================================================================
     Screen carousel
     ========================================================================== */
     var $appSlide = $('.app-slide-auto')
-    if($appSlide.length > 0){
-         $appSlide.owlCarousel({
+    if ($appSlide.length > 0) {
+        $appSlide.owlCarousel({
             dots: false,
             loop: true,
             animateOut: 'fadeOut',
@@ -91,7 +92,7 @@
             autoplayTimeout: 2500,
             autoWidth: true,
             touchDrag: false,
-            items:3,
+            items: 3,
             mouseDrag: false
         })
     }
@@ -100,18 +101,18 @@
     Testimonial Carousel
     ========================================================================== */
     var quoteCarousel = $('.quote')
-    if(quoteCarousel.length > 0){
+    if (quoteCarousel.length > 0) {
         quoteCarousel.owlCarousel({
-            loop:true,
-            autoplayTimeout:3500,
-            items:1,
+            loop: true,
+            autoplayTimeout: 3500,
+            items: 1,
             nav: false,
-            margin:20,
-            items:1
+            margin: 20,
+            items: 1
         })
     }
 
-     /* ==========================================================================
+    /* ==========================================================================
         Wow
     ========================================================================== */
     new WOW().init();
@@ -120,7 +121,7 @@
     /* ==========================================================================
       Mailchimp ajax
     ========================================================================== */
-    if($('.mailchimp').length > 0) {
+    if ($('.mailchimp').length > 0) {
         /*  MAILCHIMP  */
         $('.mailchimp').ajaxChimp({
             language: 'es',
@@ -156,7 +157,7 @@
 
 
     // when the form is submitted
-    $contactForm.on('submit', function (e) {
+    $contactForm.on('submit', function(e) {
 
         // if the validator does not prevent form submit
         if (!e.isDefaultPrevented()) {
@@ -167,8 +168,7 @@
                 type: "POST",
                 url: url,
                 data: $(this).serialize(),
-                success: function (data)
-                {
+                success: function(data) {
                     console
                     // data = JSON object that contact.php returns
 
@@ -201,35 +201,35 @@
     ========================================================================== */
 
     var $navItem = $('.right-nav a, .demo a, .footer-link a');
-    if($navItem.length > 0 ){
-        $navItem.on('click', function (e) {
+    if ($navItem.length > 0) {
+        $navItem.on('click', function(e) {
             $(document).off("scroll");
-                if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
-                || location.hostname == this.hostname) {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') ||
+                location.hostname == this.hostname) {
 
                 var target = $(this.hash),
-                headerHeight = $(".navbar").height()-2; // Get fixed header height
+                    headerHeight = $(".navbar").height() - 2; // Get fixed header height
 
-                target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
 
                 if (target.length) {
                     $('html,body').animate({
-                      scrollTop: target.offset().top - headerHeight
+                        scrollTop: target.offset().top - headerHeight
                     }, 1000);
                     return false;
                 }
             }
         });
     }
-     /* ==========================================================================
+    /* ==========================================================================
         Accordion
     ========================================================================== */
 
     function toggleIcon(e) {
-    $(e.target)
-        .prev('.panel-heading')
-        .find(".more-less")
-        .toggleClass('glyphicon-plus glyphicon-minus');
+        $(e.target)
+            .prev('.panel-heading')
+            .find(".more-less")
+            .toggleClass('glyphicon-plus glyphicon-minus');
     }
     $('.panel-group').on('hidden.bs.collapse', toggleIcon);
     $('.panel-group').on('shown.bs.collapse', toggleIcon);
@@ -238,34 +238,32 @@
     /* ==========================================================================
         pricing
     ========================================================================== */
-        var e = document.getElementById("filt-monthly"),
+    var e = document.getElementById("filt-monthly"),
         d = document.getElementById("filt-hourly"),
         t = document.getElementById("switcher"),
         m = document.getElementById("monthly"),
         y = document.getElementById("hourly");
-        e.addEventListener("click", function(){
-          t.checked = false;
-          e.classList.add("toggler--is-active");
-          d.classList.remove("toggler--is-active");
-          m.classList.remove("none");
-          y.classList.add("none");
-        });
+    e.addEventListener("click", function() {
+        t.checked = false;
+        e.classList.add("toggler--is-active");
+        d.classList.remove("toggler--is-active");
+        m.classList.remove("none");
+        y.classList.add("none");
+    });
 
-        d.addEventListener("click", function(){
-          t.checked = true;
-          d.classList.add("toggler--is-active");
-          e.classList.remove("toggler--is-active");
-          m.classList.add("none");
-          y.classList.remove("none");
-        });
+    d.addEventListener("click", function() {
+        t.checked = true;
+        d.classList.add("toggler--is-active");
+        e.classList.remove("toggler--is-active");
+        m.classList.add("none");
+        y.classList.remove("none");
+    });
 
-        t.addEventListener("click", function(){
-          d.classList.toggle("toggler--is-active");
-          e.classList.toggle("toggler--is-active");
-          m.classList.toggle("none");
-          y.classList.toggle("none");
-        })
+    t.addEventListener("click", function() {
+        d.classList.toggle("toggler--is-active");
+        e.classList.toggle("toggler--is-active");
+        m.classList.toggle("none");
+        y.classList.toggle("none");
+    })
 
 })(jQuery);
-
-
