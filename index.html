@@ -5,6 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>WhatShop</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <link rel="apple-touch-icon" sizes="57x57" href="https://whatshop.live/themes/fav-icon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="https://whatshop.live/themes/fav-icon/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="https://whatshop.live/themes/fav-icon/apple-icon-72x72.png">
@@ -26,7 +27,18 @@
     <link rel="stylesheet" type="text/css" href="./style/style.css">
     <link rel="stylesheet" type="text/css" href="./style/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/2e32c435e9.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+    <script>
+        $(document).ready(function() {
+            $('.slider').slick({
+                arrows: false,
+                autoplay: true,
+                autoplaySpeed: 1500
+            });
 
+        });
+    </script>
 
     <!-- Cookie Metomic-->
     <script src="./js/config.js" crossorigin="" charset="utf-8"></script>
@@ -60,8 +72,8 @@
                         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
 							<i class="fa fa-bars"></i>
 						</button>
-                        <a class="navbar-brand page-scroll logo-light" href="https://whatshop.live/"><img alt="" src="./img/logo.png"></a>
-                        <a class="navbar-brand page-scroll logo-clr" href="https://whatshop.live/"><img alt="" src="./img/logo-clr.png"></a>
+                        <a class="navbar-brand page-scroll logo-light" href="https://whatshop.live/"><img alt="" src="./image/logo.png"></a>
+                        <a class="navbar-brand page-scroll logo-clr" href="https://whatshop.live/"><img alt="" src="./image/logo-clr.png"></a>
                     </div>
 
                     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -113,67 +125,16 @@
                         </div>
                         <div class="col-sm-6 img-pre">
                             <div class="slide-side text-center">
-                                <img class="phone" alt="" src="./img/phone.png">
-                                <div class="owl-carousel nplr app-slide-auto owl-theme owl-center owl-loaded owl-text-select-on">
-
-
-
-                                    <div class="owl-stage-outer">
-                                        <div class="owl-stage" style="transition: all 0.25s ease 0s; width: 2124px; transform: translate3d(-943.5px, 0px, 0px);">
-                                            <div class="owl-item cloned" style="width: auto; margin-right: 0px;">
-                                                <div>
-                                                    <img alt="" src="./img/screen.png">
-
-                                                </div>
-                                            </div>
-                                            <div class="owl-item cloned" style="width: auto; margin-right: 0px;">
-                                                <div>
-                                                    <img alt="" src="./img/screen2.png">
-                                                </div>
-                                            </div>
-                                            <div class="owl-item cloned" style="width: auto; margin-right: 0px;">
-                                                <div>
-                                                    <img alt="" src="./img/screen3.png" style="opacity: 1;">
-                                                </div>
-                                            </div>
-                                            <div class="owl-item" style="width: auto; margin-right: 0px;">
-                                                <div>
-                                                    <img alt="" src="./img/screen.png">
-                                                </div>
-                                            </div>
-                                            <div class="owl-item active center" style="width: auto; margin-right: 0px;">
-                                                <div>
-                                                    <img alt="" src="./img/screen2.png">
-                                                </div>
-                                            </div>
-                                            <div class="owl-item active" style="width: auto; margin-right: 0px;">
-                                                <div>
-                                                    <img alt="" src="./img/screen3.png" style="opacity: 1;">
-                                                </div>
-                                            </div>
-                                            <div class="owl-item cloned" style="width: auto; margin-right: 0px;">
-                                                <div>
-                                                    <img alt="" src="./img/screen.png">
-                                                </div>
-                                            </div>
-                                            <div class="owl-item cloned" style="width: auto; margin-right: 0px;">
-                                                <div>
-                                                    <img alt="" src="./img/screen2.png">
-                                                </div>
-                                            </div>
-                                            <div class="owl-item cloned" style="width: auto; margin-right: 0px;">
-                                                <div>
-                                                    <img alt="" src="./img/screen3.png" style="opacity: 1;">
-                                                </div>
-                                            </div>
-                                        </div>
+                                <img class="phone" alt="" src="./image/phone.png">
+                                <div class="slider">
+                                    <div class="slide-1">
+                                        <img src="image/screen.png" alt="">
                                     </div>
-                                    <div class="owl-controls">
-                                        <div class="owl-nav">
-                                            <div class="owl-prev" style="display: none;">prev</div>
-                                            <div class="owl-next" style="display: none;">next</div>
-                                        </div>
-                                        <div class="owl-dots" style="display: none;"></div>
+                                    <div class="slide-2">
+                                        <img src="image/screen2.png" alt="">
+                                    </div>
+                                    <div class="slide-3">
+                                        <img src="image/screen3.png" alt="">
                                     </div>
                                 </div>
                             </div>
@@ -199,7 +160,7 @@
                     <div class="items feat-op row grad-blue text-center wow  fadeInUp animated" data-wow-duration="2s" data-wow-delay=".4s" style="visibility: visible; animation-duration: 2s; animation-delay: 0.4s; animation-name: fadeInUp;">
                         <div class="col-sm-3 res-margin-sm">
                             <div class="icon-md">
-                                <span class="clip-txt fa fa-WhatsApp" aria-hidden="true"></span>
+                                <span class="clip-txt fas fa-mobile-alt" aria-hidden="true"></span>
                             </div>
                             <div class="text">
                                 <h6 class="fw-400 mg-0">Turn WhatsApp into a business opportunity by leveraging WhatShop.</h6>
@@ -234,7 +195,7 @@
 
                     </div>
                     <div class="bg-mockup text-center wow  fadeInUp animated" data-wow-duration="2s" data-wow-delay=".6s" style="visibility: visible; animation-duration: 2s; animation-delay: 0.6s; animation-name: fadeInUp;">
-                        <img alt="" src="./img/bg-mockup.png">
+                        <img alt="" src="./image/bg-mockup.png">
                     </div>
                 </div>
             </div>
@@ -305,7 +266,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 col-md-offset-3 text-center  wow  fadeInUp animated" data-wow-duration="1s" data-wow-delay=".2s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.2s; animation-name: fadeInUp;">
-                    <img alt="" src="./img/img-art.png">
+                    <img alt="" src="./image/img-art.png">
                     <div class="spce"></div>
                     <h4>30K+ Users</h4>
                     <p>With an already proliferating clientele, we're growing stronger daily. Initiate your free trial version today!</p>
@@ -333,7 +294,7 @@
                         </div>
                     </div>
                     <div class="col-sm-4 col-md-3 text-center wow  fadeInUp animated" data-wow-duration="1s" data-wow-delay=".4s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.4s; animation-name: fadeInUp;">
-                        <img alt="" src="./img/img-i.png">
+                        <img alt="" src="./image/img-i.png">
                         <div class="text-center grad-blue btn-over">
                             <a class="btn-round video" href="https://www.youtube.com/watch?v=5o5ojXf57mI" savefrom_lm_index="0" savefrom_lm="1"><i class="fa fa-play clip-txt" aria-hidden="true"></i></a><span style="padding: 0; margin: 0; margin-left: 5px;"><a href="http://savefrom.net/?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D5o5ojXf57mI&amp;utm_source=chameleon&amp;utm_medium=extensions&amp;utm_campaign=link_modifier" target="_blank" title="Get a direct link" savefrom_lm="1" savefrom_lm_is_link="1" style="background-image: url(&quot;data:image/gif;base64,R0lGODlhEAAQAOZ3APf39+Xl5fT09OPj4/Hx8evr6/3+/u7u7uDh4OPi497e3t7e3/z8/P79/X3GbuXl5ubl5eHg4WzFUfb39+Pj4lzGOV7LOPz7+/n6+vn5+ZTLj9/e387Ozt7f3/7+/vv7/ISbePn5+m/JV1nRKXmVbkCnKVrSLDqsCuDh4d/e3uDn3/z7/H6TdVeaV1uSW+bn5v39/eXm5eXm5kyHP/f39pzGmVy7J3yRd9/f3mLEKkXCHJbka2TVM5vaZn6Wdfn6+YG/c/r5+ZO/jeLi41aHTIeageLn4f39/vr6+kzNG2PVM5i+lomdf2CXYKHVmtzo2YXNeDqsBebl5uHh4HDKWN3g3kKqEH6WeZHTXIPKdnSPbv79/pfmbE7PHpe1l4O8dTO5DODg4VDLIlKUUtzo2J7SmEWsLlG4NJbFjkrJHP7+/VK5Nfz8+zmnC3KKa+Hg4OHh4Y63j/3+/eDg4Ojo6P///8DAwP///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEAAHcALAAAAAAQABAAAAfWgHd2g4SFhYJzdYqLjIpzgx5bBgYwHg1Hk2oNDXKDFwwfDF5NLmMtcStsn4MhGT8YS04aGmU1QRhIGYMTADQAQlAODlloAMYTgwICRmRfVBISIkBPKsqDBAREZmcVFhYVayUz2IMHB1dWOmImI2lgUVrmgwUFLzdtXTxKSSduMfSD6Aik48MGlx05SAykM0gKhAAPAhTB0oNFABkPHg5KMIBCxzlMQFQZMGBIggSDpsCJgGDOmzkIUCAIM2dOhEEcNijQuQDHgg4KOqRYwMGOIENIB90JBAA7&quot;); background-repeat: no-repeat; width: 16px; height: 16px; display: inline-block; border: none; text-decoration: none; padding: 0px; position: relative;"></a></span>
                         </div>
@@ -389,7 +350,7 @@
                     <div class="flx-container res-center-sm align-flx-center flx-off-xs row">
                         <div class="col-sm-5 col-md-5 res-margin-sm">
                             <div class="overview-img wow  fadeInUp animated" data-wow-duration="1.2s" data-wow-delay=".2s" style="visibility: visible; animation-duration: 1.2s; animation-delay: 0.2s; animation-name: fadeInUp;">
-                                <img alt="" src="./img/img-k.png">
+                                <img alt="" src="./image/img-k.png">
                             </div>
                         </div>
                         <div class="col-sm-6 col-md-5 col-md-offset-2">
@@ -424,42 +385,42 @@
                 <div class="owl-stage" style="transition: all 0.25s ease 0s; width: 6835.5px; transform: translate3d(-97.13px, 0px, 0px);">
                     <div class="owl-item cloned" style="width: 438.25px; margin-right: 50px;">
                         <div>
-                            <img alt="" src="./img/SL-1.png">
+                            <img alt="" src="./image/SL-1.png">
                         </div>
                     </div>
                 </div>
                 <div class="owl-stage" style="transition: all 0.25s ease 0s; width: 6835.5px; transform: translate3d(-97.13px, 0px, 0px);">
                     <div class="owl-item cloned" style="width: 438.25px; margin-right: 50px;">
                         <div>
-                            <img alt="" src="./img/SL-2.png">
+                            <img alt="" src="./image/SL-2.png">
                         </div>
                     </div>
                 </div>
                 <div class="owl-stage" style="transition: all 0.25s ease 0s; width: 6835.5px; transform: translate3d(-97.13px, 0px, 0px);">
                     <div class="owl-item cloned" style="width: 438.25px; margin-right: 50px;">
                         <div>
-                            <img alt="" src="./img/SL-3.png">
+                            <img alt="" src="./image/SL-3.png">
                         </div>
                     </div>
                 </div>
                 <div class="owl-stage" style="transition: all 0.25s ease 0s; width: 6835.5px; transform: translate3d(-97.13px, 0px, 0px);">
                     <div class="owl-item cloned" style="width: 438.25px; margin-right: 50px;">
                         <div>
-                            <img alt="" src="./img/SL-4.png">
+                            <img alt="" src="./image/SL-4.png">
                         </div>
                     </div>
                 </div>
                 <div class="owl-stage" style="transition: all 0.25s ease 0s; width: 6835.5px; transform: translate3d(-97.13px, 0px, 0px);">
                     <div class="owl-item cloned" style="width: 438.25px; margin-right: 50px;">
                         <div>
-                            <img alt="" src="./img/SL-5.png">
+                            <img alt="" src="./image/SL-5.png">
                         </div>
                     </div>
                 </div>
                 <div class="owl-stage" style="transition: all 0.25s ease 0s; width: 6835.5px; transform: translate3d(-97.13px, 0px, 0px);">
                     <div class="owl-item cloned" style="width: 438.25px; margin-right: 50px;">
                         <div>
-                            <img alt="" src="./img/SL-6.png">
+                            <img alt="" src="./image/SL-6.png">
                         </div>
                     </div>
                 </div>
@@ -478,199 +439,98 @@
                         <h3>What our users say about us</h3>
                     </div>
                     <div class="owl-carousel grad-blue col-md-7 quote wow animated fadeInUp owl-theme owl-loaded" data-wow-duration="1.2s" data-wow-delay=".2s" style="visibility: hidden; animation-duration: 1.2s; animation-delay: 0.2s; animation-name: none;">
-                        <div class="owl-stage-outer">
-                            <div class="owl-stage" style="transform: translate3d(-1380px, 0px, 0px); transition: all 0s ease 0s; width: 4830px;">
-                                <div class="owl-item cloned" style="width: 670px; margin-right: 20px;">
-                                    <div class="quote-item">
-                                        <div class="quote-text bg-gray">
-                                            <div class="rating">
-                                                <ul class="rating-list">
-                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                                    <li>
-                                                        <p>(5)</p>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <p>“Whatshop is the best platform for restaurants .”</p>
-                                            <div class="spce"></div>
-                                            <div class="profile clearfix">
-                                                <h6 class="heading">Airlines Impala Restaurant</h6>
-                                                <p>Saudi Arabia</p>
-                                            </div>
-                                        </div>
-                                        <div class="profile-img"><img alt="" src="./img/airlines-impala-logo.jpeg"></div>
+
+                        <div class="owl-item active" style="width: 670px; margin-right: 20px;">
+                            <div class="quote-item">
+                                <div class="quote-text bg-gray">
+                                    <div class="rating">
+                                        <ul class="rating-list">
+                                            <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                            <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                            <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                            <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                            <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                            <li>
+                                                <p>(5)</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <p>“Whatshop help to increase our sales and user friendly for customer for ordering”</p>
+                                    <div class="spce"></div>
+                                    <div class="profile clearfix">
+                                        <h6 class="heading">Selection Fruits &amp; Vegetables</h6>
+                                        <p>Qatar</p>
                                     </div>
                                 </div>
-                                <div class="owl-item cloned" style="width: 670px; margin-right: 20px;">
-                                    <div class="quote-item">
-                                        <div class="quote-text bg-gray">
-                                            <div class="rating">
-                                                <ul class="rating-list">
-                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                                    <li>
-                                                        <p>(5)</p>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <p>“Whatshop have a nice user interface and easy to take orders”</p>
-                                            <div class="spce"></div>
-                                            <div class="profile clearfix">
-                                                <h6 class="heading">AlBaik</h6>
-                                                <p>India</p>
-                                            </div>
-                                        </div>
-                                        <div class="profile-img"><img alt="" src="./img/albaik-logo-img.jpeg"></div>
-                                    </div>
-                                </div>
-                                <div class="owl-item active" style="width: 670px; margin-right: 20px;">
-                                    <div class="quote-item">
-                                        <div class="quote-text bg-gray">
-                                            <div class="rating">
-                                                <ul class="rating-list">
-                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                                    <li>
-                                                        <p>(5)</p>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <p>“Whatshop help to increase our sales and user friendly for customer for ordering”</p>
-                                            <div class="spce"></div>
-                                            <div class="profile clearfix">
-                                                <h6 class="heading">Selection Fruits &amp; Vegetables</h6>
-                                                <p>Qatar</p>
-                                            </div>
-                                        </div>
-                                        <div class="profile-img"><img alt="" src="./img/selection-fruits-logo.png"></div>
-                                    </div>
-                                </div>
-                                <div class="owl-item" style="width: 670px; margin-right: 20px;">
-                                    <div class="quote-item">
-                                        <div class="quote-text bg-gray">
-                                            <div class="rating">
-                                                <ul class="rating-list">
-                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                                    <li>
-                                                        <p>(5)</p>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <p>“Whatshop is the best platform for restaurants .”</p>
-                                            <div class="spce"></div>
-                                            <div class="profile clearfix">
-                                                <h6 class="heading">Airlines Impala Restaurant</h6>
-                                                <p>Saudi Arabia</p>
-                                            </div>
-                                        </div>
-                                        <div class="profile-img"><img alt="" src="./img/airlines-impala-logo.jpeg"></div>
-                                    </div>
-                                </div>
-                                <div class="owl-item" style="width: 670px; margin-right: 20px;">
-                                    <div class="quote-item">
-                                        <div class="quote-text bg-gray">
-                                            <div class="rating">
-                                                <ul class="rating-list">
-                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                                    <li>
-                                                        <p>(5)</p>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <p>“Whatshop have a nice user interface and easy to take orders”</p>
-                                            <div class="spce"></div>
-                                            <div class="profile clearfix">
-                                                <h6 class="heading">AlBaik</h6>
-                                                <p>India</p>
-                                            </div>
-                                        </div>
-                                        <div class="profile-img"><img alt="" src="./img/albaik-logo-img.jpeg"></div>
-                                    </div>
-                                </div>
-                                <div class="owl-item cloned" style="width: 670px; margin-right: 20px;">
-                                    <div class="quote-item">
-                                        <div class="quote-text bg-gray">
-                                            <div class="rating">
-                                                <ul class="rating-list">
-                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                                    <li>
-                                                        <p>(5)</p>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <p>“Whatshop help to increase our sales and user friendly for customer for ordering”</p>
-                                            <div class="spce"></div>
-                                            <div class="profile clearfix">
-                                                <h6 class="heading">Selection Fruits &amp; Vegetables</h6>
-                                                <p>Qatar</p>
-                                            </div>
-                                        </div>
-                                        <div class="profile-img"><img alt="" src="./img/selection-fruits-logo.png"></div>
-                                    </div>
-                                </div>
-                                <div class="owl-item cloned" style="width: 670px; margin-right: 20px;">
-                                    <div class="quote-item">
-                                        <div class="quote-text bg-gray">
-                                            <div class="rating">
-                                                <ul class="rating-list">
-                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                                    <li>
-                                                        <p>(5)</p>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <p>“Whatshop is the best platform for restaurants .”</p>
-                                            <div class="spce"></div>
-                                            <div class="profile clearfix">
-                                                <h6 class="heading">Airlines Impala Restaurant</h6>
-                                                <p>Saudi Arabia</p>
-                                            </div>
-                                        </div>
-                                        <div class="profile-img"><img alt="" src="./img/airlines-impala-logo.jpeg"></div>
-                                    </div>
-                                </div>
+                                <div class="profile-img"><img alt="" src="./image/selection-fruits-logo.png"></div>
                             </div>
                         </div>
-                        <div class="owl-controls">
-                            <div class="owl-nav">
-                                <div class="owl-prev" style="display: none;">prev</div>
-                                <div class="owl-next" style="display: none;">next</div>
+                        <div class="owl-item" style="width: 670px; margin-right: 20px;">
+                            <div class="quote-item">
+                                <div class="quote-text bg-gray">
+                                    <div class="rating">
+                                        <ul class="rating-list">
+                                            <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                            <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                            <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                            <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                            <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                            <li>
+                                                <p>(5)</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <p>“Whatshop is the best platform for restaurants .”</p>
+                                    <div class="spce"></div>
+                                    <div class="profile clearfix">
+                                        <h6 class="heading">Airlines Impala Restaurant</h6>
+                                        <p>Saudi Arabia</p>
+                                    </div>
+                                </div>
+                                <div class="profile-img"><img alt="" src="./image/airlines-impala-logo.jpeg"></div>
                             </div>
-                            <div class="owl-dots" style="">
-                                <div class="owl-dot active"><span></span></div>
-                                <div class="owl-dot"><span></span></div>
-                                <div class="owl-dot"><span></span></div>
+                        </div>
+                        <div class="owl-item" style="width: 670px; margin-right: 20px;">
+                            <div class="quote-item">
+                                <div class="quote-text bg-gray">
+                                    <div class="rating">
+                                        <ul class="rating-list">
+                                            <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                            <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                            <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                            <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                            <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                            <li>
+                                                <p>(5)</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <p>“Whatshop have a nice user interface and easy to take orders”</p>
+                                    <div class="spce"></div>
+                                    <div class="profile clearfix">
+                                        <h6 class="heading">AlBaik</h6>
+                                        <p>India</p>
+                                    </div>
+                                </div>
+                                <div class="profile-img"><img alt="" src="./image/albaik-logo-img.jpeg"></div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <div class="owl-controls">
+                    <div class="owl-nav">
+                        <div class="owl-prev" style="display: none;">prev</div>
+                        <div class="owl-next" style="display: none;">next</div>
+                    </div>
+                    <div class="owl-dots" style="">
+                        <div class="owl-dot active"><span></span></div>
+                        <div class="owl-dot"><span></span></div>
+                        <div class="owl-dot"><span></span></div>
+                    </div>
+                </div>
             </div>
+        </div>
+        </div>
         </div>
     </section>
     <!-- End testimonial -->
@@ -916,7 +776,7 @@
                                 </div>
                             </div>
                             <div class="col-md-4 col-md-offset-1 col-sm-5">
-                                <img alt="" src="./img/img-faq.png">
+                                <img alt="" src="./image/img-faq.png">
                             </div>
                         </div>
                     </div>
@@ -1012,7 +872,7 @@
 
                 <div class="row footer-widget">
                     <div class="col-md-4 col-sm-6 res-margin">
-                        <a class="navbar-brand" href="https://whatshop.live/index-2.html"><img alt="" src="./WhatShop_files/logo.png"></a>
+                        <a class="navbar-brand" href="https://whatshop.live/index-2.html"><img alt="" src="./image/logo.png"></a>
                         <div class="spce"></div>
                         <p>WhatShop is an ideal order placing solution that eases out the whole process for sellers and buyers alike. And yes, you guessed it right! Using WhatShop means no more time-consuming calls. Just a few taps on your WhatsApp window
                             and order whenever you desire.</p>
@@ -1049,6 +909,11 @@
     <!-- script -->
     <script src="./js/vendor.bundle.js"></script>
     <script src="./js/script.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+
+
 </body>
 
 </html>
